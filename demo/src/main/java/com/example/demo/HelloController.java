@@ -18,4 +18,9 @@ public class HelloController {
     public String getWebindex() {
         return "index";
     }
+    
+    @RequestMapping({"/","welcome"})
+    public String getWebwelcome() {
+    	return "welcome";
+    }
 }
