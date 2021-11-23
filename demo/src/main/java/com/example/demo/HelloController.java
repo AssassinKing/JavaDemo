@@ -23,4 +23,8 @@ public class HelloController {
     public String getWebwelcome() {
     	return "welcome";
     }
+    @RequestMapping({"/","estag"})
+    public String getestag() {
+    	return "estag";
+    }
 }
