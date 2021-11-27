@@ -8,23 +8,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HelloController {  
-    @GetMapping({"/", "/hello"})
-    public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
-        model.addAttribute("name", name);
-        return "hello";    
-    }
+
+	@RequestMapping({"EistagCapital_demo"})
     
-    @RequestMapping({ "/","index" })
-    public String getWebindex() {
-        return "index";
+    public String geteistagcapital() {
+        return "EistagCapital_demo";
     }
+
+    @RequestMapping({"eistag_demo"})
     
-    @RequestMapping({"/","welcome"})
-    public String getWebwelcome() {
-    	return "welcome";
-    }
-    @RequestMapping({"/","estag"})
     public String getestag() {
-    	return "estag";
+        return "eistag_demo";
+    }
+    
+    @RequestMapping("welcome_demo")
+    
+    public String getwelcome(){
+    	return "welcome_demo";
+    }
+    
+    @RequestMapping("index_demo")
+    
+    public String getindex(){
+    	return "index_demo";
+    }
+    
+    @RequestMapping("ECLogin_demo")
+    
+    public String geteclogin(){
+    	return "ECLogin_demo";
     }
 }
